@@ -10,13 +10,9 @@ namespace Problems
         static void Main(string[] args)
         {
             var classes = FindDerivedTypesFromAssembly(Assembly.GetExecutingAssembly(), typeof (BaseProblem), true);
-            foreach (var problemType in classes)
+            foreach (var problem in classes.Select(problemType => Assembly.GetExecutingAssembly().CreateInstance(problemType.ToString())).Where(problem => problem != null))
             {
-                var problem = Assembly.GetExecutingAssembly().CreateInstance(problemType.ToString());
-                if (problem != null)
-                {
-                    ((BaseProblem) problem).Run();
-                }
+                ((BaseProblem) problem).Run();
             }
             Console.ReadKey();
         }
