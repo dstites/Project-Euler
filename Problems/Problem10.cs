@@ -1,5 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
 
 namespace Problems
@@ -14,23 +13,22 @@ namespace Problems
         public override string DoProblem()
         {
             const int max = 2000000;
-            var primes = new Dictionary<int, bool>(max);
+            var primes = new Dictionary<long, bool>(max);
             for(var i = 3; i < max; i+= 2)
             {
                 primes.Add(i, false);
             }
-            var y = 3;
-            var sum = 2;
-            while(y < max)
+            long y = 3;
+            while(y < 1414)
             {
-                for (var x = y*y; x < max; x += y)
+                for (long p = y*y; p < max; p += y)
                 {
-                    primes[x] = true;
+                    primes[p] = true;
                 }
-                sum += y;
-                y = primes.First(q => !q.Value && q.Key > y).Key;
+                long y1 = y;
+                y = primes.First(q => !q.Value && q.Key > y1).Key;
             }
-            return sum.ToString();
+            return (2 + primes.Where(q=> !q.Value).Select(q=> q.Key).Sum()).ToString();
         }
     }
 }
