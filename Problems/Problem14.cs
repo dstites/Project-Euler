@@ -12,27 +12,25 @@ namespace Problems
             get { return 14; }
         }
 
+        private Dictionary<long, int> _list = new Dictionary<long, int> { { 1, 1 } };
+
+        private int GetLength(long value)
+        {
+            int length;
+            var valExists = _list.TryGetValue(value, out length);
+            return !valExists ? GetLength(value%2 == 0 ? value/2 : (value*3) + 1) + 1 : length;
+        }
+
         public override string DoProblem()
         {
-            var longestChain = 0;
             var longestChainId = 0;
-            for (var i = 1000000; i > 1; i-- )
+            var longestChain = 0;
+            for (var i = 2; i < 1000000; i++ )
             {
-                var list = new List<int>();
-                var x = i;
-                while (x > 1)
-                {
-                    list.Add(x);
-                    if (x % 2== 0)
-                    {
-                        x /= 2;
-                    }else
-                    {
-                        x = (3 * x) + 1;
-                    }
-                }
-                if (list.Count <= longestChain) continue;
-                longestChain = list.Count;
+                var length = GetLength(i);
+                _list.Add(i, length);
+                if (length <= longestChain) continue;
+                longestChain = length;
                 longestChainId = i;
             }
             return longestChainId.ToString();
