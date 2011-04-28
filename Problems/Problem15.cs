@@ -30,7 +30,7 @@ namespace Problems
 
         public override string DoProblem()
         {
-            return string.Empty;
+            return "INCOMPLETE";
             //return MakeMove(20, 20).ToString();
         }
     }
