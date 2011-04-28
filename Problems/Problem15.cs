@@ -13,33 +13,25 @@ namespace Problems
 
         private Dictionary<Dictionary<int, int>, int> _list = new Dictionary<Dictionary<int, int>, int>();
 
-        private int MakeMove(int x, int y)
+        private long MakeMove(int x, int y)
         {
-            var val = new Dictionary<int, int>
-                          {
-                              {x, y}
-                          };
-            int count;
-            _list.TryGetValue(val, out count);
-            if (count == 0)
+
+            if (x == 0 && y == 0)
             {
-                if (x < 20)
-                {
-                    count += MakeMove(x + 1, y);
-                }
-                if (y < 20)
-                {
-                    count += MakeMove(x, y + 1);
-                }
-                _list.Add(val, count);
+                return 0L;
             }
-            
-            return count;
+            if (x == 0 || y == 0)
+            {
+                return 1L;
+            }
+
+            return MakeMove(x - 1, y) + MakeMove(x, y - 1);
         }
 
         public override string DoProblem()
         {
-            return MakeMove(0, 0).ToString();
+            return string.Empty;
+            //return MakeMove(20, 20).ToString();
         }
     }
 }
