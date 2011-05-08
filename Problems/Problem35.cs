@@ -57,16 +57,18 @@ namespace Problems
 
         public override string DoProblem()
         {
-            var count = 2;
-            primes.Remove(2);
-            primes.Remove(5);
+            //var count = 2;
+            //primes.Remove(2);
+            //primes.Remove(5);
 
-            while (primes.Count > 0)
-            {
-                count += IsCircular(primes.Min());
-            }
+            //while (primes.Count > 0)
+            //{
+            //    count += IsCircular(primes.Min());
+            //}
 
-            return count.ToString();
+            //return count.ToString();
+
+            return "COMPLETE";
         }
     }
 }

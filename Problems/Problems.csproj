@@ -60,12 +60,15 @@
     <Compile Include="Problem19.cs" />
     <Compile Include="Problem2.cs" />
     <Compile Include="Problem20.cs" />
+    <Compile Include="Problem22.cs" />
     <Compile Include="Problem25.cs" />
     <Compile Include="Problem3.cs" />
     <Compile Include="Problem301.cs" />
     <Compile Include="Problem31.cs" />
     <Compile Include="Problem35.cs" />
+    <Compile Include="Problem37.cs" />
     <Compile Include="Problem4.cs" />
+    <Compile Include="Problem41.cs" />
     <Compile Include="Problem48.cs" />
     <Compile Include="Problem5.cs" />
     <Compile Include="Problem56.cs" />
@@ -83,6 +86,9 @@
     <None Include="app.config" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="names.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="triangle.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
