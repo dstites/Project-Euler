@@ -10,9 +10,7 @@ namespace Problems
         }
 
         private int _count = 0;
-
-        private Dictionary<Dictionary<int, int>, int> _list = new Dictionary<Dictionary<int, int>, int>();
-
+        
         private long MakeMove(int x, int y)
         {
 
@@ -25,13 +23,12 @@ namespace Problems
                 return 1L;
             }
 
-            return MakeMove(x - 1, y) + MakeMove(x, y - 1);
+            return 1 + MakeMove(x - 1, y) + MakeMove(x, y - 1);
         }
 
         public override string DoProblem()
         {
-            return "INCOMPLETE";
-            //return MakeMove(20, 20).ToString();
+            return MakeMove(20, 20).ToString();
         }
     }
 }
