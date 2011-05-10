@@ -28,7 +28,8 @@ namespace Problems
 
         public override string DoProblem()
         {
-            return MakeMove(20, 20).ToString();
+            //return MakeMove(20, 20).ToString();
+            return "INCOMPLETE";
         }
     }
 }
