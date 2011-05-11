@@ -14,6 +14,15 @@ namespace Problems
             return new string(reverseString.ToArray()) == testString;
         }
 
+        public static long PascalEntry(int row, int column)
+        {
+            long current = 1;
+            for (int i = 1; i <= column; i++)
+            {
+                current = (current*(row + 1 - i))/i;
+            }
+            return current;
+        }
 
         public static BigInteger Power(double val1, double val2)
         {
