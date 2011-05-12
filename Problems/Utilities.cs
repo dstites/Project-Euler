@@ -8,6 +8,7 @@ namespace Problems
 {
     public class Utilities
     {
+		
         public static bool IsPalindrome(string testString)
         {
             var reverseString = testString.AsEnumerable().Reverse();
@@ -33,6 +34,20 @@ namespace Problems
             }
             return result;
         }
+		
+		public static int SumDivisors(int n){
+			var sum = 1;
+  			var t = Math.Sqrt(n);
+			for (int i = 2; i < (int)t + 1; i ++){
+				if (n % i == 0){
+					sum += i + n/i;
+				}
+			}
+			if (t == (int)t){
+				sum -= (int)t;	
+			}
+			return sum;
+		}
 
 
         public static int[] ESieve(int upperLimit)
