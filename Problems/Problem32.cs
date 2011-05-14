@@ -22,7 +22,7 @@ namespace Problems
 						
 				}
 			}
-								
+			
 			var sum = products.Distinct().Sum(q => q);
 			return sum.ToString();
 		}

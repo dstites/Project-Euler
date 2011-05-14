@@ -88,6 +88,7 @@
     <Compile Include="Problem24.cs" />
     <Compile Include="Problem26.cs" />
     <Compile Include="Problem32.cs" />
+    <Compile Include="Problem38.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
