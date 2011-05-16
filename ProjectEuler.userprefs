@@ -1,9 +1,14 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|x86" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Problems/Problem25.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Problems/Problem43.cs">
     <Files>
       <File FileName="Problems/Problem26.cs" Line="35" Column="27" />
       <File FileName="Problems/Problem25.cs" Line="31" Column="22" />
+      <File FileName="Problems/Problem35.cs" Line="1" Column="1" />
+      <File FileName="Problems/Problem32.cs" Line="8" Column="3" />
+      <File FileName="Problems/Problem38.cs" Line="13" Column="82" />
+      <File FileName="Problems/Problem24.cs" Line="53" Column="7" />
+      <File FileName="Problems/Problem43.cs" Line="22" Column="8" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
